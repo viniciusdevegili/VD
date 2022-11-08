@@ -1,24 +1,28 @@
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 
-export const Home = ({ navigation }) => (
+export const VDhome = ({ navigation }) => (
   <View>
-    <Text>APPLE</Text>
-    <Image
+    <br></br>
+    <center><Text><b>APPLE</b></Text>
+    </center>
+    <center><Image
       source={{
-        uri: "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202210251425",
+        uri: "https://www.transparentpng.com/thumb/apple-logo/12znKl-apple-logo-free-download.png",
       }}
       style={styles.imagem}
     ></Image>
-    <Button title="Sobre" onPress={() => navigation.navigate("Sobre")} />
-    <Button title="Contato" onPress={() => navigation.navigate("Contato")} />
-    <Button title="Notícias" onPress={() => navigation.navigate("Noticias")} />
-    <Button title="Produtos" onPress={() => navigation.navigate("Produtos")} />
+    </center>
+    <Button title="Sobre" onPress={() => navigation.navigate("sobre")} />
+    <Button title="contato" onPress={() => navigation.navigate("contato")} />
+    <Button title="Notícias" onPress={() => navigation.navigate("noticias")} />
+    <Button title="Produtos" onPress={() => navigation.navigate("produtos")} />
   </View>
 );
 
 const styles = StyleSheet.create({
   imagem: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
   },
 });
+

@@ -1,9 +1,12 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Home } from "../screens/home";
-
-
-
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import VDcontato from "../screens/contato";
+
+import { VDhome } from "../screens/home";
+import { VDnoticias } from "../screens/noticias";
+import { VDprodutos } from "../screens/produtos";
+import { VDsobre } from "../screens/sobre";
+
 
 
 
@@ -22,19 +25,55 @@ export const RootNavigation = () => {
       style={{ backgroundColor: '#ff00ff' }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="home"
+        component={VDhome}
        options={{
          tabBarLabel: 'Home',
          tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="account" color={color} size={26} />
+          <MaterialCommunityIcons name="home" color={color} size={26} />
          ),
        }}
       />
-     
-     
-     
-      
+      <Stack.Screen
+        name="contato"
+        component={VDcontato}
+       options={{
+         tabBarLabel: 'Contato',
+         tabBarIcon: ({ color }) => (
+          <MaterialCommunityIcons name="contacts" color={color} size={26} />
+         ),
+       }}
+      />
+       <Stack.Screen
+        name="sobre"
+        component={VDsobre}
+       options={{
+         tabBarLabel: 'Sobre',
+         tabBarIcon: ({ color }) => (
+          <MaterialCommunityIcons name="apple" color={color} size={26} />
+         ),
+       }}
+      />
+       <Stack.Screen
+        name="produtos"
+        component={VDprodutos}
+       options={{
+         tabBarLabel: 'Produtos',
+         tabBarIcon: ({ color }) => (
+          <MaterialCommunityIcons name="store" color={color} size={26} />
+         ),
+       }}
+      />
+      <Stack.Screen
+        name="noticias"
+        component={VDnoticias}
+       options={{
+         tabBarLabel: 'Noticias',
+         tabBarIcon: ({ color }) => (
+          <MaterialCommunityIcons name="newspaper" color={color} size={26} />
+         ),
+       }}
+      />
 
     </Stack.Navigator>
   )
